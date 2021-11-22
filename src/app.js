@@ -57,9 +57,13 @@ app.get("/weather", (req, res) => {
                         weatherData.weather_descriptions[0] +
                         ". It is " +
                         weatherData.temperature +
-                        " degrees outside. There's a " +
+                        " degrees outside and it feels like " +
+                        weatherData.feelslike +
+                        " degrees. There's a " +
                         weatherData.precip +
-                        "% chance of rain.",
+                        "% chance of rain and humidity is " +
+                        weatherData.humidity +
+                        "%.",
                     location: req.query.address,
                 });
             });
